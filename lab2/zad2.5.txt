@@ -8,7 +8,6 @@ public class Main
 		Scanner scan = new Scanner(System.in);
 		int n = scan.nextInt();
 		int a,b;
-		int result = 0;
 		int[] num = new int[n];
 		
 		a= num[0];
