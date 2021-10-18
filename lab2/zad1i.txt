@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import static java.lang.Math.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	double res;
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        double[] num = new double[n];
+		
+		res = 0;
+		int factorial  =1;
+		
+		for (int i =0; i<= num.length-1; i++)
+		{
+		    num[i]= scan.nextDouble();
+		}
+		
+		for (int i=0; i<= num.length-1; i++)
+		{
+		    factorial*=i+1;
+		    res+=(pow(-1, i+1)*num[i])/factorial;
+		}
+		System.out.println(res);
+		
+	}
+}

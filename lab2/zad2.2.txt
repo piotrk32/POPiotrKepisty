@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import static java.lang.Math.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		
+		int result = 0;
+		int[] num = new int[n];
+		
+		for (int i = 0; i<= num.length-1; i++)
+		{
+		    num[i] = scan.nextInt();
+		    if(num[i]>0)
+		    {
+		        result +=num[i]*2;
+		    }
+		    
+		}
+		System.out.println("Podwojna suma: ");
+		System.out.println(result);
+	}
+}

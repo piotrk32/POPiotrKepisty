@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import static java.lang.Math.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		int n = scan.nextInt();
+		
+		int result = 0;
+		int[] num = new int[n];
+		int ujemne = 0;
+		int zero = 0;
+		int dodatnie = 0;
+		
+		for (int i = 0; i<= num.length-1; i++)
+		{
+		    num[i] = scan.nextInt();
+		    if(num[i]<0)
+		    {
+		        ujemne+=1;
+		    }
+		    if(num[i]==0)
+		    {
+		        zero+=1;
+		    }
+		    if(num[i]>0)
+		    {
+		        dodatnie+=1;
+		    }
+		}
+		System.out.println("Ilosc liczb ujemnych: ");
+		System.out.println(ujemne);
+		System.out.println("Ilosc liczb zero: ");
+		System.out.println(zero);
+		System.out.println("Ilosc liczb dodatnich: ");
+		System.out.println(dodatnie);
+	
+	
+	}
+}
