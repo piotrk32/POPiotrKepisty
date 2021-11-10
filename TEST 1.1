@@ -1,0 +1,43 @@
+import java.lang.StringBuffer;
+import java.io.*;
+import java.math.*;
+import java.util.Scanner;
+import static java.lang.Character.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner scan = new Scanner(System.in);
+	    int n = scan.nextInt();
+	    int []tab = new int[n];
+	    
+	   
+	    for (int i = 0; i<=tab.length-1; i++)
+	    {
+	        int s = scan.nextInt();
+	        tab[i] = s;
+	        System.out.println(tab[i] + " " + "\n");
+	    }
+	    System.out.println(showPrimes(tab));
+	}
+	
+	
+	
+	public static int[] showPrimes(int[] tab)
+	{
+	    
+	    for (int i = 0; i <= tab.length-1; i++)
+	    {
+	        int tmp[0];
+	        int[] tabN = new int[tab.length];
+	        if (tab[i]% i == 0)
+	        {
+	            tmp = i;
+	        }
+	        System.out.println(tmp);
+	    }
+	    return tabN;
+	    
+	}
+}
