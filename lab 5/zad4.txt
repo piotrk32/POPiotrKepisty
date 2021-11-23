@@ -1,0 +1,47 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class test
+{
+
+    public static void main(String[] args)
+    {
+        ArrayList<Integer> lista = new ArrayList<Integer>();
+        lista.add(1);
+        lista.add(4);
+        lista.add(9);
+        lista.add(16);
+
+        ArrayList<Integer> lista2 = new ArrayList<Integer>();
+        lista2.add(9);
+        lista2.add(7);
+        lista2.add(4);
+        lista2.add(9);
+        lista2.add(11);
+
+        ArrayList<Integer> lista3 = reversed(lista);
+        System.out.println(lista3);
+
+
+
+
+    }
+
+    public static ArrayList<Integer> reversed(ArrayList<Integer> a)
+
+    {
+        ArrayList<Integer> lista = new ArrayList<Integer>();
+
+        int arr[] = new int [a.size()];
+
+        for (int i = 0; i<= a.size()- 1; i++)
+        {
+            arr[arr.length - i - 1] = a.get(i);
+        }
+        for (int i = 0; i<= a.size() - 1 ; i++)
+        {
+            lista.add(arr[i]);
+        }
+        return lista;
+    }
+}
