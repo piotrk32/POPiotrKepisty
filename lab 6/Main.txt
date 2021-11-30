@@ -1,0 +1,43 @@
+package pl.piotrkepisty.Main;
+
+import pl.piotrkepisty.Adres;
+import pl.piotrkepisty.Nauczyciel;
+import pl.piotrkepisty.NazwanyPunkty;
+import pl.piotrkepisty.Osoba;
+import pl.piotrkepisty.Punkt;
+import pl.piotrkepisty.Rectangle;
+import pl.piotrkepisty.Student;
+
+
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        NazwanyPunkt a = new NazwanyPunkt(1, 2, "pkt1");
+        a.show();
+        Punkt b = new Punkt(4, 5);
+        b.show();
+        Punkt c = new NazwanyPunkt(9, 9, "pkt2");
+        c.show();
+
+        Osoba o1 = new Osoba("Aro", 1923);
+        Student s1 = new Student("Majkel", 1999, "filozofia");
+        Nauczyciel n1 = new Nauczyciel("Pac", 1799, 2000);
+
+        System.out.println(o.getNazwisko());
+        System.out.println(o.getRokUrodzenia());
+        System.out.println(o);
+        System.out.println(s.getNazwisko());
+        System.out.println(s.getRokUrodzenia());
+        System.out.println(s.getKierunek());
+        System.out.println(s);
+
+        BetterRectangle br = new BetterRectangle(0, 0, 10, 20);
+        System.out.println(br.getPerimeter());
+        System.out.println(br.getArea());
+
+
+
+    }
+}
