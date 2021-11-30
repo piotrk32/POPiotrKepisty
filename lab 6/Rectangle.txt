@@ -1,7 +1,6 @@
 package pl.piotrkepisty.Rectangle;
 
 import java.awt.*;
-package pl.piotrkepisty.Rectangle;
 
 public class BetterRectangle extends Rectangle {
     public BetterRectangle(int x, int y, int height, int width){
