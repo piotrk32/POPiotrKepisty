@@ -1,0 +1,4 @@
+package pl.piotrjd.kepisty;
+
+public class PairDemo {
+}
