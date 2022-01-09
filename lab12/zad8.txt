@@ -1,0 +1,35 @@
+import java.util.*;
+public class zad8
+{
+    public static void main(String args[])
+    {
+        Integer[] list = {1, 2, 5, 9, 3, 7};
+        zad8.print(list);
+        ArrayList<Integer> arr= new ArrayList<>();
+        arr.add(1);
+        arr.add(5);
+        arr.add(3);
+        arr.add(2);
+        print(arr);
+
+
+    }
+    public static <E, I extends Iterable<E>> void print(Integer[] iterable)
+    {
+
+        ArrayList<String> stringList = new ArrayList<>();
+        for(Integer element: iterable)
+        {
+            stringList.add(element.toString());
+        }
+        String result = String.join(",", stringList);
+        System.out.println(result);
+    }
+    public static <S, T extends Iterable<S>> void print(T list)
+    {
+        for (Object element : list) {
+            System.out.println(element);
+        }
+    }
+
+}

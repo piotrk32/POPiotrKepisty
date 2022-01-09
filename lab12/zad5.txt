@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class zad5
+{
+    public static void main(String[] args)
+    {
+        Scanner scn = new Scanner(System.in);
+        Stack<String> stack = new Stack<>();
+        StringBuffer str = new StringBuffer();
+        String s = scn.nextLine();
+        String[] superSplit = s.split("[.]");
+
+
+        for(int j=0; j <superSplit.length; j++)
+        {
+            StringBuffer sb = new StringBuffer();
+            String[] split = superSplit[j].split(" ");
+            for (int i = 0; i < split.length; i++)
+            {
+                stack.add(split[i]);
+            }
+
+            for (int i = 0; i < split.length; i++)
+            {
+                sb.append(stack.pop());
+                if (i == 0)
+                {
+                    String tmp = sb.substring(0, 1).toUpperCase();
+                    sb.replace(0, 1, tmp);
+                }
+                if (i == split.length - 1)
+                {
+                    String tmp = sb.substring(1, sb.length()).toLowerCase();
+                    sb.replace(1, sb.length(), tmp);
+                    if (j == 0)
+                    {
+                        sb.append(".");
+                    }
+                    else
+                    {
+                        sb.replace(sb.length() - 1, sb.length(), ".");
+                    }
+                }
+                sb.append(" ");
+
+            }
+            str.append(sb);
+        }
+        System.out.println(str);
+
+    }
+
+}

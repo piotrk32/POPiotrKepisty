@@ -1,0 +1,42 @@
+import java.util.*;
+
+public class zad4
+{
+    public static void main(String[] args)
+    {
+        LinkedList<String> nazwiska = new LinkedList<>();
+        nazwiska.add("Cisek");
+        nazwiska.add("Kotowski");
+        nazwiska.add("Cwiek");
+        nazwiska.add("Kononowicz");
+
+        System.out.println(nazwiska);
+        odwroc(nazwiska);
+        System.out.println(nazwiska);
+
+        LinkedList<Integer> nums = new LinkedList<>();
+        nums.add(1);
+        nums.add(2);
+        nums.add(3);
+        nums.add(4);
+        System.out.println(nums);
+        odwroc(nums);
+        System.out.println(nums);
+
+    }
+    public static <T> void odwroc(List<T> lista) {
+        T[] array = (T[]) lista.toArray();
+
+        lista.clear();
+
+        for(int i = 0; i < array.length/2; i++) {
+            T temp = array[i];
+            array[i] = array[array.length - i-1];
+            array[array.length-i-1] = temp;
+        }
+
+        for(T item : array) {
+            lista.add(item);
+        }
+    }
+}
